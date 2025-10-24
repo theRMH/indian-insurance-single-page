@@ -55,20 +55,15 @@ export default function HomePage() {
 
   const testimonials = [
     {
-      videoId: "PZKst8Tnr2g",
-      thumbnail: "https://img.youtube.com/vi/PZKst8Tnr2g/maxresdefault.jpg",
+      videoId: "aUAm654ygRw",
+      thumbnail: "https://img.youtube.com/vi/aUAm654ygRw/maxresdefault.jpg",
       title: "Client Success Story 1"
     },
     {
-      videoId: "PZKst8Tnr2g",
-      thumbnail: "https://img.youtube.com/vi/PZKst8Tnr2g/maxresdefault.jpg",
+      videoId: "WK-jgzVY1UM",
+      thumbnail: "https://img.youtube.com/vi/WK-jgzVY1UM/maxresdefault.jpg",
       title: "Client Success Story 2"
     },
-    {
-      videoId: "PZKst8Tnr2g",
-      thumbnail: "https://img.youtube.com/vi/PZKst8Tnr2g/maxresdefault.jpg",
-      title: "Client Success Story 3"
-    }
   ]
 
   const handleSubmit = async (e: React.FormEvent) => {
