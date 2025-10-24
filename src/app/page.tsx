@@ -61,7 +61,7 @@ export default function HomePage() {
     },
     {
       videoId: "WK-jgzVY1UM",
-      thumbnail: "https://img.youtube.com/vi/WK-jgzVY1UM/maxresdefault.jpg",
+      thumbnail: "https://img.youtube.com/vi/WK-jgzVY1UM/sddefault.jpg",
       title: "Client Success Story 2"
     },
   ]
