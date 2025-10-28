@@ -20,6 +20,7 @@ export default function HomePage() {
     insuranceType: "",
     message: ""
   })
+  const [calendlyOpen, setCalendlyOpen] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [showStickyButton, setShowStickyButton] = useState(false)
   const [videoOpen, setVideoOpen] = useState(false)
@@ -682,132 +683,20 @@ export default function HomePage() {
           >
             <Card className="shadow-2xl border-2">
               <CardContent className="p-8">
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <motion.div 
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: 0.3 }}
-                      className="space-y-2"
-                    >
-                      <Label htmlFor="name" className="text-base font-medium">Full Name *</Label>
-                      <Input
-                        id="name"
-                        placeholder="Enter your full name"
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        required
-                        className="h-12"
-                      />
-                    </motion.div>
-                    <motion.div 
-                      initial={{ opacity: 0, x: 20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: 0.3 }}
-                      className="space-y-2"
-                    >
-                      <Label htmlFor="email" className="text-base font-medium">Email Address *</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        placeholder="your.email@example.com"
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        required
-                        className="h-12"
-                      />
-                    </motion.div>
-                  </div>
+                <div className="space-y-6 text-center">
+  <Button
+    size="lg"
+    className="w-full text-lg py-6 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 shadow-lg hover:shadow-xl transition-all"
+    onClick={() => setCalendlyOpen(true)}
+  >
+    Book a Meeting on Calendly
+  </Button>
 
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <motion.div 
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: 0.4 }}
-                      className="space-y-2"
-                    >
-                      <Label htmlFor="phone" className="text-base font-medium">Phone Number *</Label>
-                      <Input
-                        id="phone"
-                        type="tel"
-                        placeholder="+91 XXXXX XXXXX"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        required
-                        className="h-12"
-                      />
-                    </motion.div>
-                    <motion.div 
-                      initial={{ opacity: 0, x: 20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: 0.4 }}
-                      className="space-y-2"
-                    >
-                      <Label htmlFor="insurance" className="text-base font-medium">Service Type *</Label>
-                      <Select
-                        value={formData.insuranceType}
-                        onValueChange={(value) => setFormData({ ...formData, insuranceType: value })}
-                        required
-                      >
-                        <SelectTrigger id="insurance" className="h-12 w-full flex items-center">
-                          <SelectValue placeholder="Select service type" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="individual-business">Individual & Business Insurance</SelectItem>
-                          <SelectItem value="life">Life Insurance</SelectItem>
-                          <SelectItem value="health">Health Insurance</SelectItem>
-                          <SelectItem value="general">General Insurance</SelectItem>
-                          <SelectItem value="mutual-fund">Mutual Fund</SelectItem>
-                          <SelectItem value="bonds">Bonds</SelectItem>
-                          <SelectItem value="equities">Equities</SelectItem>
-                          <SelectItem value="deposits">Public Deposits</SelectItem>
-                          <SelectItem value="housing-loan">Housing Loan</SelectItem>
-                          <SelectItem value="mortgage-loan">Mortgage Loan</SelectItem>
-                          <SelectItem value="other">Other</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </motion.div>
-                  </div>
+  <p className="text-gray-500 italic font-medium">
+    Advisory and Services Charges Apply
+  </p>
+</div>
 
-                  <motion.div 
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.5 }}
-                    className="space-y-2"
-                  >
-                    <Label htmlFor="message" className="text-base font-medium">Message</Label>
-                    <Textarea
-                      id="message"
-                      placeholder="Tell us about your requirements..."
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="min-h-32 resize-none"
-                    />
-                  </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.6 }}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    <Button
-                      type="submit"
-                      size="lg"
-                      disabled={isSubmitting}
-                      className="w-full text-lg py-6 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 shadow-lg hover:shadow-xl transition-all disabled:opacity-50"
-                    >
-                      {isSubmitting ? "Sending..." : "Submit Inquiry"}
-                    </Button>
-                  </motion.div>
-                </form>
               </CardContent>
             </Card>
           </motion.div>
@@ -946,6 +835,27 @@ export default function HomePage() {
           )}
         </DialogContent>
       </Dialog>
+      {/* Calendly Dialog */}
+<Dialog open={calendlyOpen} onOpenChange={setCalendlyOpen}>
+  <DialogContent className="max-w-4xl w-full p-0 overflow-hidden bg-white border-0">
+    <button
+      onClick={() => setCalendlyOpen(false)}
+      className="absolute top-4 right-4 z-50 w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors"
+    >
+      <X className="w-6 h-6 text-gray-700" />
+    </button>
+
+    <div className="relative w-full h-[80vh]">
+      <iframe
+        src="https://calendly.com/whytheheck200/sks-meeting"
+        className="absolute inset-0 w-full h-full rounded-xl shadow-2xl"
+        frameBorder="0"
+        allow="camera; microphone; fullscreen"
+      />
+    </div>
+  </DialogContent>
+</Dialog>
+
     </div>
   )
 }
