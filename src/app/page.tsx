@@ -689,11 +689,11 @@ export default function HomePage() {
     className="w-full text-lg py-6 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 shadow-lg hover:shadow-xl transition-all"
     onClick={() => setCalendlyOpen(true)}
   >
-    Book a Meeting on Calendly
+    Schedule A Meeting
   </Button>
 
   <p className="text-gray-500 italic font-medium">
-    Advisory and Services Charges Apply
+    **Advisory and Services Charges Apply
   </p>
 </div>
 
