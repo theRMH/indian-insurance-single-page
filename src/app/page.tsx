@@ -720,7 +720,7 @@ export default function HomePage() {
               <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-3">
                 <Phone className="w-6 h-6 text-blue-600" />
               </div>
-              <p className="text-gray-600 font-medium">+91 74011 22942</p>
+              <p className="text-gray-600 font-medium">+91 99414 11007</p>
             </motion.div>
             <motion.div 
               initial={{ opacity: 0, scale: 0.8 }}
@@ -733,23 +733,8 @@ export default function HomePage() {
               <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-3">
                 <Mail className="w-6 h-6 text-green-600" />
               </div>
-              <p className="text-gray-600 font-medium">info@sksinvesmentsolutions.com</p>
-            </motion.div>
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.7, type: "spring" }}
-              className="flex flex-col items-center"
-              whileHover={{ scale: 1.05 }}
-            >
-              <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mb-3">
-                <MapPin className="w-6 h-6 text-purple-600" />
-              </div>
-              <p className="text-gray-600 font-medium">
-                No.9, Telegraph Colony,<br />
-                Nanganallur, Chennai-600061
-              </p>
+              <p className="text-gray-600 font-medium">info@sksinvestmentsolutions.com</p>
+              <p className="text-gray-600 font-medium">sksinvestmentsol@gmail.com</p>
             </motion.div>
           </motion.div>
         </div>

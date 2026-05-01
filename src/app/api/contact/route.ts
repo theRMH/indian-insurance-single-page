@@ -45,7 +45,7 @@ Submitted at: ${new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })
     // Example with Resend:
     // await resend.emails.send({
     //   from: "noreply@sksinvesmentsolutions.com",
-    //   to: "info@sksinvesmentsolutions.com",
+    //   to: "sksinvestmentsol@gmail.com",
     //   subject: `New Insurance Inquiry from ${name}`,
     //   text: emailContent,
     // })
