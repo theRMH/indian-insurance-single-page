@@ -707,7 +707,7 @@ export default function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-12 grid md:grid-cols-3 gap-6 text-center"
+            className="mt-12 grid md:grid-cols-3 gap-6 text-center max-w-3xl mx-auto"
           >
             <motion.div 
               initial={{ opacity: 0, scale: 0.8 }}
@@ -722,7 +722,7 @@ export default function HomePage() {
               </div>
               <p className="text-gray-600 font-medium">+91 99414 11007</p>
             </motion.div>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -734,6 +734,18 @@ export default function HomePage() {
                 <Mail className="w-6 h-6 text-green-600" />
               </div>
               <p className="text-gray-600 font-medium">info@sksinvestmentsolutions.com</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.7, type: "spring" }}
+              className="flex flex-col items-center"
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mb-3">
+                <Mail className="w-6 h-6 text-purple-600" />
+              </div>
               <p className="text-gray-600 font-medium">sksinvestmentsol@gmail.com</p>
             </motion.div>
           </motion.div>
